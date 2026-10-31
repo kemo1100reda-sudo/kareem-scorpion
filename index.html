@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#090b12">
+  <title>KAREEM SCORPION</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.185.0/build/three.module.js"}}
+  </script>
+</head>
+<body>
+  <div id="game">
+    <canvas id="scene"></canvas>
+    <header class="hud">
+      <div class="brand"><span class="brand-mark">♏</span><div><b>KAREEM SCORPION</b><small>ENDLESS RUN</small></div></div>
+      <div class="stats"><div><small>النقاط</small><b id="score">0</b></div><div><small>العملات</small><b id="coins">0</b></div></div>
+      <button id="pause" class="icon-btn" aria-label="إيقاف مؤقت">Ⅱ</button>
+    </header>
+    <div id="hint" class="hint">اسحب يمين أو شمال للتحرك • أعلى للقفز • أسفل للانزلاق</div>
+    <section id="start-screen" class="overlay">
+      <div class="panel">
+        <div class="scorpion">♏</div>
+        <p class="eyebrow">THE CITY IS YOUR TRACK</p>
+        <h1>KAREEM <em>SCORPION</em></h1>
+        <p>اجمع العملات، تفادى القطارات والحواجز، وحطّم رقمك القياسي!</p>
+        <button id="start" class="main-btn">ابدأ الجري</button>
+        <small class="help">التحكم بالسحب على الشاشة أو بأسهم لوحة المفاتيح</small>
+      </div>
+    </section>
+    <section id="gameover" class="overlay hidden">
+      <div class="panel">
+        <div class="scorpion">☠</div>
+        <p class="eyebrow">RUN OVER</p>
+        <h2>انتهى السباق!</h2>
+        <div class="result"><span>نتيجتك</span><b id="final-score">0</b></div>
+        <button id="restart" class="main-btn">العب مرة أخرى</button>
+      </div>
+    </section>
+    <div id="pause-screen" class="overlay hidden">
+      <div class="panel">
+        <h2>اللعبة متوقفة</h2>
+        <button id="resume" class="main-btn">كمّل اللعب</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
